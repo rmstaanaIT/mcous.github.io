@@ -1,0 +1,11 @@
+{
+  "name"            : "cousins.io",
+  "version"         : "0.0.1",
+  "devDependencies" :
+  {
+    "jade"          : "*",
+    "stylus"        : "*",
+    "coffee-script" : "*",
+    "node-static"   : "*"
+  }
+}
