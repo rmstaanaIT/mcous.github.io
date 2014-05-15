@@ -1,0 +1,9 @@
+#! /bin/sh
+# compile the necessary files
+
+# get script directory
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# compile jade
+cd ${DIR}/..
+jade jade/*.jade --out .
