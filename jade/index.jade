@@ -1,8 +1,64 @@
+// citation needed mixin
+mixin citation
+  sup &#91;<a href='http://en.wikipedia.org/wiki/Wikipedia:Citation_needed'>citation needed</a>&#93;
+
+// the actual document
 doctype html
 html(lang="en")
-  head
-    title cousins.io
+
+  include header
+
   body
-    h1 hello world!
-    p To which the world replied, "Shut the Hell up; it's one in the morning."
-    h2 the world regrets nothing
+    h1 a website that exists to promote michael cousins
+
+    nav
+      ul
+        li: a(href='#') contact
+        li: a(href='#') projects
+        li: a(href='#') skillz
+        li: a(href='#') the fancy resume
+
+    section
+      h2 selected methods to contact michael cousins
+      p If you wish to reach me, there are options.
+      ul
+        li: a(href='#') the emails
+        li: a(href='#') the githubs
+        li: a(href='#') the linkedins
+        li: a(href='#') the (untouched) twitters
+
+    section
+      h2 a series of endevours by michael cousins
+
+      article
+        h3 clockblock
+
+      article
+        h3 reflow
+
+      article
+        h3 r2dbrew
+
+      article
+        h3 lamp
+
+    section
+      h2 michael cousins' rumoured attributes
+      p michael cousins is probably:
+      ul
+        li mechanically inclined
+          +citation()
+        li electrifying
+          +citation()
+        li educated
+          +citation()
+        li occasionally employed
+          +citation()
+        li a semi-professional joke explainer
+          +citation()
+        li a terrible speler
+
+    section
+      h2 obligatory "Hello, world!"
+      p To which the world replied, "Shut the Hell up; it's one in the morning."
+      p This sentiment, of course, was a ridiculous sentiment for the world to express for a variety of reasons. These reasons included (but are in no way limited to) the concept of time zones, the fact that the world is an abstract concept incapable of speech (or a planet, also incapable of human speech), and that there is no way for the world to, in fact, hear the greeting that was presented to it.
