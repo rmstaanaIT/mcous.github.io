@@ -6,4 +6,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # watch jade
 cd ${DIR}/..
-jade --watch jade/*.jade --out .
+jade --pretty --watch jade/index.jade --out .

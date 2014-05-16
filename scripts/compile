@@ -6,4 +6,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # compile jade
 cd ${DIR}/..
-jade jade/*.jade --out .
+jade --pretty jade/index.jade --out .
