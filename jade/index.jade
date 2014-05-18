@@ -2,9 +2,6 @@
 mixin citation
   sup &#91;<a href='http://en.wikipedia.org/wiki/Wikipedia:Citation_needed'>citation needed</a>&#93;
 
-mixin link(href, text)
-  a(href=href target='_blank')= text
-
 // the actual document
 doctype html
 html(lang="en")
@@ -18,6 +15,11 @@ html(lang="en")
       ul
         li: a(href='#contact') contact
         li: a(href='#projects') projects
+          ul
+            li: a(href='#clockblock') clockblock
+            li: a(href='#reflow') reflow
+            li: a(href='#lamp') lamp
+            li: a(href='#r2dbrew') r2dbrew
         li: a(href='#skills') skillz
         li: a(href='#') the fancy resume
 
@@ -31,39 +33,66 @@ html(lang="en")
         li: a(href='http://twitter.com/mjcous' target='_blank') the (untouched) twitters
 
     section#projects
-      h2 a series of endevours by michael cousins
+      h2 a selection of endevours by michael cousins
 
-      article
+      article#clockblock
         h3 clockblock
         ul
           li: img(src='#')
           li: img(src='#')
           li: img(src='#')
-          li: img(src='#')
-          li: img(src='#')
-        p The clockblock, available for sale at <a href='http://clockblock.me' target='_blank'>clockblock.me</a>, is a minimalist clock that uses LEDs instead of hands and lives in a beautiful block of Louisiana cypress. It is a collaboration between <a href='http://wileycousins.com' target='_blank'>Wiley Cousins</a> (Cole Wiley and myself) and Trig Studios (James Goedert).
+        p The <strong>clockblock</strong>, available for sale at <a href='http://clockblock.me' target='_blank'>clockblock.me</a>, is a minimalist clock that uses LEDs instead of hands and lives in a beautiful block of Louisiana cypress. It is a collaboration between <a href='http://wileycousins.com' target='_blank'>Wiley Cousins</a> (<a href='http://hcwiley.com/' target='_blank'>H. Cole Wiley</a> and myself) and Trig Studios (James Goedert).
         p We machine a solid block of cypress with holes that go right up to, but not through, the surface of the block. Each of those holes gets an LED that shines through the thin layer of wood that's left. There are thrity six LEDs: twelve arms each with an hour, minute, and second LED.
         p The leds are controlled by a custom set of PCBs running firmware written in C++. I designed the boards and wrote all the firmware. We've open sourced everything, and it's available at <a href='http://github.com/wileycousins/clockblock' target='_blank'>the clockblock github page</a>.
         p A bulk of the machining is done by CNC. I built models of the block in CAD and generated all the toolpaths that we run on the blocks. It's fun to watch.
         h4 fun clockblock facts:
         ul
           li surface mount components: big number
-          li through hole component: none at all
-          li lines of code
+          li through hole component: only the LEDs (we like surface mount)
+          li lines of code: multiple
           li how often I lose my favorite set of tweezers when building a clock: every fourteen minutes
 
-      article
-        h3 reflow
 
-      article
-        h3 r2dbrew
-
-      article
+      article#lamp
         h3 lamp
+        ul
+          li: img(src='#')
+          li: img(src='#')
+          li: img(src='#')
+        p Another <a href='http://wileycousins.com target='_blank>Wiley Cousins</a> and Trig Studios collaboration, <strong>lamp</strong> continues the theme of LEDs and wood. There's a pattern here. For <strong>lamp</strong>, we've designed a modular electronics package that can sense how it's been configured, allowing us to use the same lighting system in a variety of form factors.
+        p <strong>lamp</strong> is a product in active development, which you can watch at <a href='http://github.com/wileycousins/lamp' target='_blank'>the lamp github page</a>. The first version to be offered for sale will be available in a variety of configurations, including a wifi enabled version.
+        p I am designing all the PCBs for <strong>lamp</strong> and writing all the firmware. PCBs and firmware are things I do. In case you hadn't noticed, I am trying to stress those skills. Head on: apply directly to the forehead.
+
+      article#reflow
+        h3 reflow
+        ul
+          li: img(src='#')
+          li: img(src='#')
+          li: img(src='#')
+        p <strong>reflow</strong> is a shockingly creatively titled circuit board I designed to hack a regular old toaster oven into a solder reflow oven. It's a microcontroller, a thermocouple jack and amplifier (for precise temperature feedback), and a solid-state AC relay. It's allows me to work almost exclusively in surface mount components when designing circuit boards.
+        p After using it for a little while, I realized it could be used for any AC heating appliance. I've also used it to convert a slow cooker into a sous vide machine, and I'm working on a new revision that'll make it work better as a generic temperature feedback heater controller.
+        p I've open sourced the designs, and they're available at <a href='http://github.com/mcous/reflow' target='_blank'>the reflow github page</a>.
+        h4 fun reflow facts
+        ul
+          li number of board designs lost due to forgetting to push commits and a laptop subsequently getting stolen: 1
+          li lines of code: several
+          li number of people food poisoned: none at all
+          li reflow boards baked recursively (reflow boards baked by an oven controlled by a reflow board): 2
+          li other boards baked: dozens
+
+      article#r2dbrew
+        h3 r2dbrew
+        ul
+          li: img(src='#')
+          li: img(src='#')
+          li: img(src='#')
+        p <strong>r2dbrew</strong> is an <a href='http://www.lostlettermen.com/article/the-man-behind-the-lsu-r2-d2-keg' target='_blank'>incredible creation</a> of Barton Gilley. He's been busy working on a new-and-improved version of his R2D2 kegerator, and I'm helping him out with the control circuitry. R2 has several LED panels in the head, a motor to spin the head, speakers to beep and boop, wheels to roll around, and a proximity sensor to know when to dispense beer into the cups of awestruck beer enthusiasts.
+        p Because Barton is a cool guy(tm), he's allowed me to open source the board designs. They're at <a href='http://github.com/mcous/r2dbrew'>the github page</a>. Check it out if you want to watch the boards and firmware come together.
+        p Oh, and if you want one for yourself, hit me up. I know a guy who might be willing to build one for you.
 
     section#skills
       h2 michael cousins' rumoured attributes
-      p michael cousins is probably:
+      p I am probably:
       ul
         li mechanically inclined
           +citation()
