@@ -5,6 +5,7 @@
   {
     "jade"          : "*",
     "stylus"        : "*",
+    "nib"           : "*",
     "coffee-script" : "*",
     "node-static"   : "*"
   }
