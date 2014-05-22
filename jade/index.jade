@@ -9,28 +9,36 @@ html(lang="en")
   include header
 
   body
-    h1 a website that exists to promote michael cousins
+    div#main-title-div
+      h1#main-title a page that exists to promote michael cousins
 
-    nav
-      ul
+
+    nav.navbar.navbar-default(role='navigation')
+      ul.nav.nav-pills.nav-justified
         li: a(href='#contact') contact
-        li: a(href='#projects') projects
-          ul
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown' href='#') projects
+            span.caret
+          ul.dropdown-menu
             li: a(href='#clockblock') clockblock
             li: a(href='#reflow') reflow
             li: a(href='#lamp') lamp
             li: a(href='#r2dbrew') r2dbrew
         li: a(href='#skills') skillz
-        li: a(href='#') the fancy resume
+        li: a(href='#') resume
 
-    section#contact
+    section.container-fluid#contact
       h2 selected methods to contact michael cousins
       p If you wish to reach the subject of this page (i.e. me), there are options.
-      ul
-        li: a(href='mailto:mike@cousins.io' target='_blank') the emails
-        li: a(href='http://github.com/mcous' target='_blank') the githubs
-        li: a(href='http://www.linkedin.com/in/mcous/' target='_blank') the linkedins
-        li: a(href='http://twitter.com/mjcous' target='_blank') the (untouched) twitters
+      ul.row#contact-list
+        li.contact-item.col-sm-1
+          a(href='mailto:mike@cousins.io' target='_blank') the emails
+        li.contact-item.col-sm-1
+          a(href='http://github.com/mcous' target='_blank') the githubs
+        li.contact-item.col-sm-1
+          a(href='http://www.linkedin.com/in/mcous/' target='_blank') the linkedins
+        li.contact-item.col-sm-1
+          a(href='http://twitter.com/mjcous' target='_blank') the (untouched) twitters
 
     section#projects
       h2 a selection of endevours by michael cousins
@@ -38,7 +46,7 @@ html(lang="en")
       article#clockblock
         h3 clockblock
         ul
-          li: img(src='#')
+          li: img(src='img/#')
           li: img(src='#')
           li: img(src='#')
         p The <strong>clockblock</strong>, available for sale at <a href='http://clockblock.me' target='_blank'>clockblock.me</a>, is a minimalist clock that uses LEDs instead of hands and lives in a beautiful block of Louisiana cypress. It is a collaboration between <a href='http://wileycousins.com' target='_blank'>Wiley Cousins</a> (<a href='http://hcwiley.com/' target='_blank'>H. Cole Wiley</a> and myself) and Trig Studios (James Goedert).
@@ -110,3 +118,8 @@ html(lang="en")
       h2 obligatory "Hello, world!"
       p To which the world replied, "Shut the Hell up; it's one in the morning."
       p This sentiment, of course, was a ridiculous sentiment for the world to express for a variety of reasons. These reasons included (but were in no way limited to) the concept of time zones, the fact that the world is an abstract concept incapable of speech (or a planet, also incapable of human speech), and that there is no way for the world to, in fact, hear the greeting that was presented to it.
+
+    // include jQuery (necessary for bootstrap's js plugins)
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    // all other scripts necessary
+    script(src='js/bootstrap.min.js')
