@@ -1,11 +1,2 @@
 # package management
 node_modules/*
-bower_components/**/*
-
-# exceptions for files I need
-# bootstrap
-!bower_components/bootstrap/dist
-# jquery
-!bower_components/jquery/dist
-# octicons
-!bower_components/octicons
