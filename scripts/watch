@@ -1,9 +1,0 @@
-#! /bin/sh
-# watch for changes
-
-# get script directory
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# watch jade
-cd ${DIR}/..
-jade --pretty --watch jade/index.jade --out .
