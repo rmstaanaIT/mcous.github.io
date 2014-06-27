@@ -1,12 +1,16 @@
-// citation needed mixin
-mixin citation
-  sup &#91;<a href='http://en.wikipedia.org/wiki/Wikipedia:Citation_needed'>citation needed</a>&#93;
-
-// the actual document
+// cousins.io
 doctype html
 html(lang="en")
 
-  include header
+  // header
+  head
+    // this seems like a good thing to call the page
+    title mike @ cousins.io
+
+    // boostrap css
+    link(rel='stylesheet' href='bower_components/dist/css/boostrap.min.css')
+    // octicons
+    link(rel='stylesheet' href='bower_components/octicons/octicons/octicons.css')
 
   body
     div#main-title-div
@@ -103,23 +107,15 @@ html(lang="en")
       p I am probably:
       ul
         li mechanically inclined
-          +citation()
         li electrifying
-          +citation()
         li educated
-          +citation()
         li occasionally employed
-          +citation()
         li a semi-professional joke explainer
-          +citation()
         li a terrible speler
 
-    section
-      h2 obligatory "Hello, world!"
-      p To which the world replied, "Shut the Hell up; it's one in the morning."
-      p This sentiment, of course, was a ridiculous sentiment for the world to express for a variety of reasons. These reasons included (but were in no way limited to) the concept of time zones, the fact that the world is an abstract concept incapable of speech (or a planet, also incapable of human speech), and that there is no way for the world to, in fact, hear the greeting that was presented to it.
-
-    // include jQuery (necessary for bootstrap's js plugins)
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-    // all other scripts necessary
-    script(src='js/bootstrap.min.js')
+    // since I'm lazy
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    // pulling myself up by my
+    script(src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    // application
+    script(src='js/app.js')

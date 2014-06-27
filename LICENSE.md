@@ -1,4 +1,4 @@
-# unnecessary license
+# cousins.io license
 Copyright 2014 by Michael Cousins
 
 Everything that isn't code or documentation is shared under the terms of the [Creative Commons Attribution-ShareAlike 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -22,3 +22,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+# bootstrap
+This site uses Bootstrap. Copyright 2011-2014 by Twitter, Inc, and shared under the terms of the MIT License.
+
+# jquery
+This site uses jQuery. Copyright 2014 by the jQuery Foundation and other contributors, and shared under the terms of the MIT License.
+
+# octicons
+This site uses GitHub's Octicons. Copyright 2012-2014 GitHub
+
+Font License: SIL OFL 1.1 (http://scripts.sil.org/OFL)
+Applies to all font files
+
+Code License: MIT (http://choosealicense.com/licenses/mit/)
+Applies to all other files
