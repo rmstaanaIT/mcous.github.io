@@ -7,66 +7,99 @@ html(lang="en")
     // this seems like a good thing to call the page
     title mike @ cousins.io
 
+    // favicons
+    link(rel='icon' type='image/png' href='/favicon-16x16.png' sizes='16x16')
+    link(rel='icon' type='image/png' href='/favicon-32x32.png' sizes='32x32')
+    link(rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96')
+
     // boostrap css
-    link(rel='stylesheet' href='bower_components/dist/css/boostrap.min.css')
+    link(rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css')
     // octicons
     link(rel='stylesheet' href='bower_components/octicons/octicons/octicons.css')
+    // my stylesheet
+    link(rel='stylesheet' href='app.css')
 
   body
-    div#main-title-div
-      h1#main-title a page that exists to promote michael cousins
+    nav#nav-top.navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        ul.nav
+          li.col-xs-3
+            a(href='#contact') contact
+          li.dropdown.col-xs-3
+            a.dropdown-toggle(data-toggle='dropdown' href='#')= 'projects '
+              span.octicon.octicon-chevron-down
+            ul.dropdown-menu
+              li
+                a(href='#clockblock') clockblock
+              li
+                a(href='#reflow') reflow
+              li
+                a(href='#lamp') lamp
+              li
+                a(href='#svgerber') svgerber
+          li.col-xs-3
+            a(href='#skills') skills
+          li.col-xs-3
+            a(href='#') resume
 
+    .container.page-header
+      h1#main-title a page to promote michael cousins
+      p Hi, I'm Mike. I'm a mechatronics engineer with a passion for open-source hardware and software, design, and coffee. One day I am going to build an open-source coffee-making robot. Until then, get in touch with me if you want to make something cool.
 
-    nav.navbar.navbar-default(role='navigation')
-      ul.nav.nav-pills.nav-justified
-        li: a(href='#contact') contact
-        li.dropdown
-          a.dropdown-toggle(data-toggle='dropdown' href='#') projects
-            span.caret
-          ul.dropdown-menu
-            li: a(href='#clockblock') clockblock
-            li: a(href='#reflow') reflow
-            li: a(href='#lamp') lamp
-            li: a(href='#r2dbrew') r2dbrew
-        li: a(href='#skills') skillz
-        li: a(href='#') resume
-
-    section.container-fluid#contact
+    .container#contact
       h2 methods to contact michael cousins
       p If you wish to reach the subject of this page (i.e. me), there are options:
-      ul.row#contact-list
+      ul.nav.nav-pills#contact-list
         li.col-sm-2
-          a(href='mailto:mike@cousins.io' target='_blank') the emails
+          a(href='mailto:mike@cousins.io' target='_blank')= 'the emails '
+            span.octicon.octicon-mail
         li.col-sm-2
-          a(href='http://github.com/mcous' target='_blank') the githubs
+          a(href='http://github.com/mcous' target='_blank')= 'the githubs '
+            span.octicon.octicon-mark-github
         li.col-sm-2
-          a(href='http://www.linkedin.com/in/mcous/' target='_blank') the linkedins
-        li.col-sm-2
-          a(href='http://twitter.com/mjcous' target='_blank') the twitters
+          a(href='http://www.linkedin.com/in/mcous/' target='_blank')= 'the linkedins '
+            span.octicon.octicon-link
 
-    section.container-fluid#projects
+    section.container#projects
       h2 selected endevours of michael cousins
 
       article#clockblock
-        h3 clockblock
-        ul
-          li: img(src='img/#')
-          li: img(src='#')
-          li: img(src='#')
+        h3= 'clockblock '
+          small: a(href='http://clockblock.me' target='_blank')= 'clockblock.me'
+        ul.list-unstyled.row
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/clock_wild.jpg')
+              img(src='/img/tn/clock_wild_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/clock_back.jpg')
+              img(src='/img/tn/clock_back_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/clock_board.jpg')
+              img(src='/img/tn/clock_board_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/clock_route.jpg')
+              img(src='/img/tn/clock_route_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/clock_proto.jpg')
+              img(src='/img/tn/clock_proto_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/clock_bread.jpg')
+              img(src='/img/tn/clock_bread_tn.jpg')
         p The <strong>clockblock</strong>, available for sale at <a href='http://clockblock.me' target='_blank'>clockblock.me</a>, is a minimalist clock that uses LEDs instead of hands and lives in a beautiful block of Louisiana cypress. It is a collaboration between <a href='http://wileycousins.com' target='_blank'>Wiley Cousins</a> (<a href='http://hcwiley.com/' target='_blank'>H. Cole Wiley</a> and myself) and Trig Studios (James Goedert).
         p We machine a solid block of cypress with holes that go right up to, but not through, the surface of the block. Each of those holes gets an LED that shines through the thin layer of wood that's left. There are thrity six LEDs: twelve arms each with an hour, minute, and second LED.
         p The leds are controlled by a custom set of PCBs running firmware written in C++. I designed the boards and wrote all the firmware. We've open sourced everything, and it's available at <a href='http://github.com/wileycousins/clockblock' target='_blank'>the clockblock github page</a>.
         p A bulk of the machining is done by CNC. I built models of the block in CAD and generated all the toolpaths that we run on the blocks. It's fun to watch.
         h4 fun clockblock facts:
         ul
-          li surface mount components: big number
-          li through hole component: only the LEDs (we like surface mount)
-          li lines of code: multiple
+          li surface mount components: 67
+          li through hole component: 36 LEDs (we like surface mount)
+          li lines of code: just over 1700
           li how often I lose my favorite set of tweezers when building a clock: every fourteen minutes
 
 
       article#lamp
-        h3 lamp
+        h3= 'lamp '
+          small: a(href='http://github.com/wileycousins/lamp' target='_blank')= 'lamp github page'
         ul
           li: img(src='#')
           li: img(src='#')
@@ -76,7 +109,8 @@ html(lang="en")
         p I am designing all the PCBs for <strong>lamp</strong> and writing all the firmware. PCBs and firmware are things I do. In case you hadn't noticed, I am trying to stress those skills. Head on: apply directly to the forehead.
 
       article#reflow
-        h3 reflow
+        h3= 'reflow '
+          small: a(href='http://github.com/wileycousins/reflow' target='_blank')= 'reflow github page'
         ul
           li: img(src='#')
           li: img(src='#')
@@ -87,22 +121,17 @@ html(lang="en")
         h4 fun reflow facts
         ul
           li number of board designs lost due to forgetting to push commits and a laptop subsequently getting stolen: 1
-          li lines of code: several
+          li lines of code: about 1300
           li number of people food poisoned: none at all
           li reflow boards baked recursively (reflow boards baked by an oven controlled by a reflow board): 2
           li other boards baked: dozens
 
-      article#r2dbrew
-        h3 r2dbrew
-        ul
-          li: img(src='#')
-          li: img(src='#')
-          li: img(src='#')
-        p <strong>r2dbrew</strong> is an <a href='http://www.lostlettermen.com/article/the-man-behind-the-lsu-r2-d2-keg' target='_blank'>incredible creation</a> of Barton Gilley. He's been busy working on a new-and-improved version of his R2D2 kegerator, and I'm helping him out with the control circuitry. R2 has several LED panels in the head, a motor to spin the head, speakers to beep and boop, wheels to roll around, and a proximity sensor to know when to dispense beer into the cups of awestruck beer enthusiasts.
-        p Because Barton is a cool guy(tm), he's allowed me to open source the board designs. They're at <a href='http://github.com/mcous/r2dbrew'>the github page</a>. Check it out if you want to watch the boards and firmware come together.
-        p Oh, and if you want one for yourself, hit me up. I know a guy who might be willing to build one for you.
+      article#svgerber
+        h3= 'svgerber '
+          small: a(href='http://svgerber.cousins.io' target='_blank')= 'svgerber.cousins.io'
+        p <strong>svgerber</strong> (working title?) is a little webapp I'm writing that converts Gerber files (PCB fabrication files) to SVGs. It's a work in progress.
 
-    section#skills
+    section.container#skills
       h2 michael cousins' rumoured attributes
       p I am probably:
       ul
@@ -118,4 +147,4 @@ html(lang="en")
     // pulling myself up by my
     script(src='bower_components/bootstrap/dist/js/bootstrap.min.js')
     // application
-    script(src='js/app.js')
+    script(src='app.js')
