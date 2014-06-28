@@ -21,44 +21,91 @@ html(lang="en")
 
   body
     nav#nav-top.navbar.navbar-default.navbar-fixed-top(role='navigation')
-      .container
-        ul.nav
-          li.col-xs-3
-            a(href='#contact') contact
-          li.dropdown.col-xs-3
-            a.dropdown-toggle(data-toggle='dropdown' href='#')= 'projects '
-              span.octicon.octicon-chevron-down
-            ul.dropdown-menu
-              li
-                a(href='#clockblock') clockblock
-              li
-                a(href='#reflow') reflow
-              li
-                a(href='#lamp') lamp
-              li
-                a(href='#svgerber') svgerber
-          li.col-xs-3
-            a(href='#skills') skills
-          li.col-xs-3
-            a(href='#') resume
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button' data-toggle='collapse' data-target='#nav-top-collapse')
+            span.sr-only toggle navigation
+            span.octicon.octicon-three-bars
+          a.navbar-brand(href='#') cousins.io
+        #nav-top-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li: a(href='#contact') contact
+            li: a(href='#skills') skills
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown' href='#')= 'projects '
+                span.octicon.octicon-chevron-down
+              ul.dropdown-menu(roll='menu')
+                li: a(href='#clockblock') clockblock
+                li: a(href='#lamp') lamp
+                li: a(href='#reflow') reflow
+                li: a(href='#svgerber') svgerber
+            li: a(href='/cousins-resume.pdf' target='_blank') resume (pdf)
 
     .container.page-header
       h1#main-title a page to promote michael cousins
       p Hi, I'm Mike. I'm a mechatronics engineer with a passion for open-source hardware and software, design, and coffee. One day I am going to build an open-source coffee-making robot. Until then, get in touch with me if you want to make something cool.
 
-    .container#contact
+    section.container#contact
       h2 methods to contact michael cousins
       p If you wish to reach the subject of this page (i.e. me), there are options:
       ul.nav#contact-list
         li.col-sm-2
-          a(href='mailto:mike@cousins.io' target='_blank')= 'the emails '
+          a(href='mailto:mike@cousins.io' target='_blank')= 'emails '
             span.octicon.octicon-mail
         li.col-sm-2
-          a(href='http://github.com/mcous' target='_blank')= 'the githubs '
+          a(href='http://github.com/mcous' target='_blank')= 'githubs '
             span.octicon.octicon-mark-github
         li.col-sm-2
-          a(href='http://www.linkedin.com/in/mcous/' target='_blank')= 'the linkedins '
+          a(href='http://www.linkedin.com/in/mcous/' target='_blank')= 'linkedins '
             span.octicon.octicon-link
+
+    section.container#skills
+      h2 michael cousins' attributes and talents
+      p
+        | I've got a degree in mechanical engineering and I specialize in electrical engineering. Also I know everything.
+        sup
+          | [
+          a(href='http://en.wikipedia.org/wiki/Wikipedia:Citation_needed' target='_blank') citation needed
+          | ]
+        |  These are some of the things I can do and use:
+      .row
+        .col-sm-3
+          h3 mechanical design
+          ul.list-unstyled
+            li SolidWorks
+            li Creo (Pro/Engineer)
+            li Plastic part design for
+              ul
+                li injection molding
+                li 3D printing
+            li Parametric surfacing
+        .col-sm-3
+          h3 electrical design
+          ul.list-unstyled
+            li KiCad
+            li Design for SMT
+            li 2.4GHz RF (BLE)
+            li MEMS sensors
+        .col-sm-3
+          h3 programming
+          ul.list-unstyled
+            li Embedded C/C++ for
+              ul
+                li 8-bit AVR
+                li 8051 SoCs
+                li PIC32
+            li C# and Java
+            li Client-side CoffeeScript
+        .col-sm-3
+          h3 prototyping
+          ul.list-unstyled
+            li 3D printing
+            li CNC routing
+            li Laser cuttting
+            li PCB assembly
+               ul
+                 li reflow and rework
+                 li through hole
 
     section.container#projects
       h2 selected endevours of michael cousins
@@ -68,22 +115,22 @@ html(lang="en")
           small: a(href='http://clockblock.me' target='_blank')= 'clockblock.me'
         ul.list-unstyled.row
           li.col-md-2.col-sm-4.col-xs-6
-            a.thumbnail(href='/img/clock_wild.jpg')
+            a.thumbnail(href='/img/clock_wild.jpg' target='_blank')
               img(src='/img/tn/clock_wild_tn.jpg')
           li.col-md-2.col-sm-4.col-xs-6
-            a.thumbnail(href='/img/clock_back.jpg')
+            a.thumbnail(href='/img/clock_back.jpg' target='_blank')
               img(src='/img/tn/clock_back_tn.jpg')
           li.col-md-2.col-sm-4.col-xs-6
-            a.thumbnail(href='/img/clock_board.jpg')
+            a.thumbnail(href='/img/clock_board.jpg' target='_blank')
               img(src='/img/tn/clock_board_tn.jpg')
           li.col-md-2.col-sm-4.col-xs-6
-            a.thumbnail(href='/img/clock_route.jpg')
+            a.thumbnail(href='/img/clock_route.jpg' target='_blank')
               img(src='/img/tn/clock_route_tn.jpg')
           li.col-md-2.col-sm-4.col-xs-6
-            a.thumbnail(href='/img/clock_proto.jpg')
+            a.thumbnail(href='/img/clock_proto.jpg' target='_blank')
               img(src='/img/tn/clock_proto_tn.jpg')
           li.col-md-2.col-sm-4.col-xs-6
-            a.thumbnail(href='/img/clock_bread.jpg')
+            a.thumbnail(href='/img/clock_bread.jpg' target='_blank')
               img(src='/img/tn/clock_bread_tn.jpg')
         p The <strong>clockblock</strong>, available for sale at <a href='http://clockblock.me' target='_blank'>clockblock.me</a>, is a minimalist clock that uses LEDs instead of hands and lives in a beautiful block of Louisiana cypress. It is a collaboration between <a href='http://wileycousins.com' target='_blank'>Wiley Cousins</a> (<a href='http://hcwiley.com/' target='_blank'>H. Cole Wiley</a> and myself) and Trig Studios (James Goedert).
         p We machine a solid block of cypress with holes that go right up to, but not through, the surface of the block. Each of those holes gets an LED that shines through the thin layer of wood that's left. There are thrity six LEDs: twelve arms each with an hour, minute, and second LED.
@@ -100,10 +147,25 @@ html(lang="en")
       article#lamp
         h3= 'lamp '
           small: a(href='http://github.com/wileycousins/lamp' target='_blank')= 'lamp github page'
-        ul
-          li: img(src='#')
-          li: img(src='#')
-          li: img(src='#')
+        ul.list-unstyled.row
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/lamp.jpg' target='_blank')
+              img(src='/img/tn/lamp_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/lamp_blue.jpg' target='_blank')
+              img(src='/img/tn/lamp_blue_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/lamp_mason.jpg' target='_blank')
+              img(src='/img/tn/lamp_mason_tn.jpg' target='_blank')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/lamp_tilt.jpg' target='_blank')
+              img(src='/img/tn/lamp_tilt_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/lamp_proto.jpg' target='_blank')
+              img(src='/img/tn/lamp_proto_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/lamp_plot.png' target='_blank')
+              img(src='/img/tn/lamp_plot_tn.png')
         p Another <a href='http://wileycousins.com target='_blank>Wiley Cousins</a> and Trig Studios collaboration, <strong>lamp</strong> continues the theme of LEDs and wood. There's a pattern here. For <strong>lamp</strong>, we've designed a modular electronics package that can sense how it's been configured, allowing us to use the same lighting system in a variety of form factors.
         p <strong>lamp</strong> is a product in active development, which you can watch at <a href='http://github.com/wileycousins/lamp' target='_blank'>the lamp github page</a>. The first version to be offered for sale will be available in a variety of configurations, including a wifi enabled version.
         p I am designing all the PCBs for <strong>lamp</strong> and writing all the firmware. PCBs and firmware are things I do. In case you hadn't noticed, I am trying to stress those skills. Head on: apply directly to the forehead.
@@ -111,10 +173,17 @@ html(lang="en")
       article#reflow
         h3= 'reflow '
           small: a(href='http://github.com/wileycousins/reflow' target='_blank')= 'reflow github page'
-        ul
-          li: img(src='#')
-          li: img(src='#')
-          li: img(src='#')
+        ul.list-unstyled.row
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/reflow_cooking.jpg' target='_blank')
+              img(src='/img/tn/reflow_cooking_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/reflow.jpg' target='_blank')
+              img(src='/img/tn/reflow_tn.jpg')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/reflow_proto.jpg' target='_blank')
+              img(src='/img/tn/reflow_proto_tn.jpg')
+
         p <strong>reflow</strong> is a shockingly creatively titled circuit board I designed to hack a regular old toaster oven into a solder reflow oven. It's a microcontroller, a thermocouple jack and amplifier (for precise temperature feedback), and a solid-state AC relay. It's allows me to work almost exclusively in surface mount components when designing circuit boards.
         p After using it for a little while, I realized it could be used for any AC heating appliance. I've also used it to convert a slow cooker into a sous vide machine, and I'm working on a new revision that'll make it work better as a generic temperature feedback heater controller.
         p I've open sourced the designs, and they're available at <a href='http://github.com/mcous/reflow' target='_blank'>the reflow github page</a>.
@@ -129,19 +198,29 @@ html(lang="en")
       article#svgerber
         h3= 'svgerber '
           small: a(href='http://svgerber.cousins.io' target='_blank')= 'svgerber.cousins.io'
-        p <strong>svgerber</strong> (working title?) is a little webapp I'm writing that converts Gerber files (PCB fabrication files) to SVGs. It's a work in progress.
+        p <strong>svgerber</strong> (working title?) is a little webapp I'm writing that converts Gerber files (PCB fabrication files) to SVGs. It's a work in progress. The logic is written in CoffeeScript and uses the
+          = ' '
+          a(href='http://svgjs.com' target='_blank') svg.js
+          |  library to generate the SVGs client-side.
+        p Since I work in KiCad, it works best with Gerbers generated by KiCad. If you try it out, let me know how it works. If anything breaks horribly, please open an issue
+          = ' '
+          a(href='http://github.com/mcous/svgerber/issues' target='_blank') at the github page
+          |  with the contents of your file (if you can).
 
-    section.container#skills
-      h2 michael cousins' rumoured attributes
-      p I am probably:
-      ul
-        li mechanically inclined
-        li electrifying
-        li educated
-        li occasionally employed
-        li a semi-professional joke explainer
-        li a terrible speler
+    // page footer
+    footer
+      nav.navbar.navbar-inverse
+        .container-fluid
+          a.navbar-text.navbar-link(href='http://github.com/mcous/mcous.github.io' target='_blank') page source
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='http://getbootstrap.com/' target='_blank') built with bootstrap
+            li
+              a(href='http://octicons.github.com/' target='_blank') uses github's octicons
+            li
+              a(href='https://github.com/mcous/mcous.github.io/blob/master/LICENSE.md' target='_blank') copyright 2014 michael cousins
 
+    // scripts
     // since I'm lazy
     script(src='bower_components/jquery/dist/jquery.min.js')
     // pulling myself up by my
