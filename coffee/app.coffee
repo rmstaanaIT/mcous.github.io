@@ -1,7 +1,8 @@
 # scroll to function using jquery's scrollTop property
+scrollOff = $('#nav-top').height()
 scrollTo = (target, ms = 250, cb) ->
   $('html, body').animate {
-    scrollTop: $(target).offset().top
+    scrollTop: $(target).offset().top - scrollOff
   }, ms, 'swing', (if cb? and typeof cb is 'function' then cb else null)
 
 # even listeners on nav links
