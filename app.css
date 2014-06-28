@@ -12,3 +12,6 @@ article {
 footer {
   padding-top: 20px;
 }
+footer div {
+  margin: 0 !important;
+}

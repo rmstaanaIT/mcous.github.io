@@ -21,7 +21,10 @@
     if (target === '#') {
       target = 'body';
     }
-    return scrollTo(target);
+    return scrollTo(target, 250, function() {
+      $('[data-toggle="dropdown"]').parent().removeClass('open');
+      return $('#nav-top-collapse').collapse('toggle');
+    });
   });
 
 }).call(this);
