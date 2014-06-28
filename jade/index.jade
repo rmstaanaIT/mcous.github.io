@@ -26,19 +26,19 @@ html(lang="en")
           button.navbar-toggle(type='button' data-toggle='collapse' data-target='#nav-top-collapse')
             span.sr-only toggle navigation
             span.octicon.octicon-three-bars
-          a.navbar-brand(href='#') cousins.io
+          a.link-scroll.navbar-brand(href='#') cousins.io
         #nav-top-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li: a(href='#contact') contact
-            li: a(href='#skills') skills
+            li: a.link-scroll(href='#contact') contact
+            li: a.link-scroll(href='#skills') skills
             li.dropdown
               a.dropdown-toggle(data-toggle='dropdown' href='#')= 'projects '
                 span.octicon.octicon-chevron-down
               ul.dropdown-menu(roll='menu')
-                li: a(href='#clockblock') clockblock
-                li: a(href='#lamp') lamp
-                li: a(href='#reflow') reflow
-                li: a(href='#svgerber') svgerber
+                li: a.link-scroll(href='#clockblock') clockblock
+                li: a.link-scroll(href='#lamp') lamp
+                li: a.link-scroll(href='#reflow') reflow
+                li: a.link-scroll(href='#svgerber') svgerber
             li: a(href='/cousins-resume.pdf' target='_blank') resume (pdf)
 
     .container.page-header
