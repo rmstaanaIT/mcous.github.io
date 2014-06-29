@@ -6,14 +6,15 @@ scrollTo = (target, ms = 250, cb) ->
   }, ms, 'swing', (if cb? and typeof cb is 'function' then cb else null)
 
 # event listeners on nav links
+navCollapse = $ '#nav-top-collapse'
 $('.link-scroll').on 'click', (e) ->
   e.preventDefault()
   e.stopPropagation()
   # get the id of the target element
-  target = $(this).attr('href')
+  target = $(this).attr 'href' 
   if target is '#' then target = 'body'
   # scroll to the id
   scrollTo target, 250, ->
     # close any dropdowns and collapsables
     $('[data-toggle="dropdown"]').parent().removeClass 'open'
-    $('#nav-top-collapse').collapse('toggle')
+    if navCollapse.hasClass 'in' then navCollapse.collapse 'toggle'
