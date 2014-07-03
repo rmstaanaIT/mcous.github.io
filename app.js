@@ -6,7 +6,7 @@
 
   dropdown = $('[data-toggle="dropdown"]');
 
-  chevron = dropdown.children('span');
+  chevron = dropdown.children('.octicon');
 
   scrollOff = $('#nav-top').height();
 
@@ -19,14 +19,6 @@
     }, ms, 'swing', ((cb != null) && typeof cb === 'function' ? cb : null));
   };
 
-  dropdown.on('click', function(e) {
-    if (dropdown.parent().hasClass('open')) {
-      return chevron.removeClass('octicon-chevron-up').addClass('octicon-chevron-down');
-    } else {
-      return chevron.removeClass('octicon-chevron-down').addClass('octicon-chevron-up');
-    }
-  });
-
   $('.link-scroll').on('click', function(e) {
     var target;
     e.preventDefault();
@@ -37,11 +29,18 @@
     }
     return scrollTo(target, 250, function() {
       dropdown.parent().removeClass('open');
-      dropdown.children('span').removeClass('octicon-chevron-up').addClass('octicon-chevron-down');
       if (navCollapse.hasClass('in')) {
         return navCollapse.collapse('toggle');
       }
     });
+  });
+
+  dropdown.on('focusin', function(e) {
+    return chevron.removeClass('octicon-chevron-down').addClass('octicon-chevron-up');
+  });
+
+  dropdown.on('focusout', function(e) {
+    return chevron.removeClass('octicon-chevron-up').addClass('octicon-chevron-down');
   });
 
 }).call(this);

@@ -25,8 +25,8 @@ html(lang="en")
     link(rel='stylesheet' href='app.css')
 
   body
-    nav#nav-top.navbar.navbar-default.navbar-fixed-top(role='navigation')
-      .container-fluid
+    nav#nav-top.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      #nav-container.container-fluid
         .navbar-header
           button.navbar-toggle(type='button' data-toggle='collapse' data-target='#nav-top-collapse')
             span.sr-only toggle navigation
@@ -46,22 +46,23 @@ html(lang="en")
                 li: a.link-scroll(href='#svgerber') svgerber
             li: a(href='/cousins-resume.pdf' target='_blank') resume (pdf)
 
-    .container.page-header
-      h1#main-title a page to promote michael cousins
-      p Hi, I'm Mike. I'm a mechatronics engineer with a passion for open-source hardware and software, design, and coffee. One day I am going to build an open-source coffee-making robot. Until then, get in touch with me if you want to make something cool.
+    .jumbotron
+      .container
+        h1#main-title a page to promote mike cousins
+        p I'm Mike, and I'm a mechatronics engineer with a passion for open-source hard / firm / software, design, and coffee. One day I'm going to build an open-source coffee making robot. Until then, get in touch with me if you want to make something cool.
 
     section.container#contact
       h2 methods to contact michael cousins
       p If you wish to reach the subject of this page (i.e. me), there are options:
       ul.nav#contact-list
-        li.col-sm-2
-          a(href='mailto:mike@cousins.io' target='_blank')= 'emails '
+        li.col-sm-3
+          a(href='mailto:mike@cousins.io' target='_blank')= 'email '
             span.octicon.octicon-mail
-        li.col-sm-2
-          a(href='http://github.com/mcous' target='_blank')= 'githubs '
+        li.col-sm-3
+          a(href='http://github.com/mcous' target='_blank')= 'github '
             span.octicon.octicon-mark-github
-        li.col-sm-2
-          a(href='http://www.linkedin.com/in/mcous/' target='_blank')= 'linkedins '
+        li.col-sm-3
+          a(href='http://www.linkedin.com/in/mcous/' target='_blank')= 'linkedin '
             span.octicon.octicon-link
 
     section.container#skills
@@ -203,6 +204,16 @@ html(lang="en")
       article#svgerber
         h3= 'svgerber '
           small: a(href='http://svgerber.cousins.io' target='_blank')= 'svgerber.cousins.io'
+        ul.list-unstyled.row
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/svgerber.png' target='_blank')
+              img(src='/img/tn/svgerber_tn.png')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/svgerber-loading.png' target='_blank')
+              img(src='/img/tn/svgerber-loading_tn.png')
+          li.col-md-2.col-sm-4.col-xs-6
+            a.thumbnail(href='/img/svgerber-output.png' target='_blank')
+              img(src='/img/tn/svgerber-output_tn.png')
         p <strong>svgerber</strong> (working title?) is a little webapp I'm writing that converts Gerber files (PCB fabrication files) to SVGs. It's a work in progress. The logic is written in CoffeeScript and uses the
           = ' '
           a(href='http://svgjs.com' target='_blank') svg.js

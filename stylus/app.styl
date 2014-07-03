@@ -1,9 +1,59 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway|Quando')
+// colors
+primary = #520063
+
+// fonts
+headFont = 'Raleway', sans-serif
+linkFont = headFont
+textFont = 'Quando', serif
+
 body
-  padding-top 32px
   padding-bottom 0
+  background linear-gradient(to right bottom, whitesmoke, silver)
+  font-family textFont
+
+h1, h2, h3, h4, h5, h6
+  font-family headFont
+  font-style normal
+
+a:link
+  font-family linkFont
+  text-decoration none
+
+#nav-top
+  background primary
+  opacity 0.9
+  border 0
+  .navbar-toggle
+    border 0
+    color whitesmoke
+    &:hover, &:focus
+      background-color white
+  #nav-top-collapse
+    border 0
+    &:not(.in)
+      .dropdown-menu
+        background-color #343434
+
+  a, .navbar-brand
+    color lightgrey
+    background-color transparent
+    &:hover, &:focus
+      color whitesmoke
+  .dropdown-menu
+    border 0
+
+.jumbotron
+  padding-top 64px
+  background-image url('/img/jumbo.jpg')
+  background-size cover
+  text-shadow black 0px 0px 8px
+  color whitesmoke
+  .container
+    min-height 200px
 
 article
-  padding-top 10px
+  padding-top 5px
 
 #contact-list
   text-align center

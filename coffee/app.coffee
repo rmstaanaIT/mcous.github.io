@@ -1,7 +1,7 @@
 # nav link variables
 navCollapse = $ '#nav-top-collapse'
 dropdown = $ '[data-toggle="dropdown"]'
-chevron = dropdown.children('span')
+chevron = dropdown.children('.octicon')
 
 # scroll to function using jquery's scrollTop property
 scrollOff = $('#nav-top').height()
@@ -10,16 +10,7 @@ scrollTo = (target, ms = 250, cb) ->
     scrollTop: $(target).offset().top - scrollOff
   }, ms, 'swing', (if cb? and typeof cb is 'function' then cb else null)
 
-# event listener on dropdown toggle to switch carret
-dropdown.on 'click', (e) ->
-
-  if dropdown.parent().hasClass 'open'
-    chevron.removeClass('octicon-chevron-up').addClass 'octicon-chevron-down'
-  else
-    chevron.removeClass('octicon-chevron-down').addClass 'octicon-chevron-up'
-
-# event listeners on nav links
-
+# event listeners on nav links that scroll
 $('.link-scroll').on 'click', (e) ->
   e.preventDefault()
   e.stopPropagation()
@@ -30,6 +21,11 @@ $('.link-scroll').on 'click', (e) ->
   scrollTo target, 250, ->
     # close any dropdowns and collapsables
     dropdown.parent().removeClass('open')
-    dropdown.children('span').removeClass('octicon-chevron-up').addClass 'octicon-chevron-down'
-
     if navCollapse.hasClass 'in' then navCollapse.collapse 'toggle'
+
+# event listener on dropdown focus to toggle chevron
+dropdown.on 'focusin', (e) ->
+  chevron.removeClass('octicon-chevron-down').addClass 'octicon-chevron-up'
+
+dropdown.on 'focusout', (e) ->
+  chevron.removeClass('octicon-chevron-up').addClass 'octicon-chevron-down'
