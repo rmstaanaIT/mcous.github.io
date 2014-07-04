@@ -22,7 +22,7 @@ a:link {
   text-decoration: none;
 }
 #nav-top {
-  background: #520063;
+  background: #4b0082;
   opacity: 0.9;
   border: 0;
 }
@@ -75,6 +75,10 @@ article {
 #contact-list {
   text-align: center;
   font-size: 16px;
+}
+#contact-list a:hover {
+  background-color: #fff;
+  border-radius: 4px;
 }
 footer {
   padding-top: 20px;
