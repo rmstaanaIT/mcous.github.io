@@ -3,6 +3,9 @@ navCollapse = $ '#nav-top-collapse'
 dropdown = $ '[data-toggle="dropdown"]'
 chevron = dropdown.children('.octicon')
 
+# gallery
+gallery = $ '.list-gallery'
+
 # scroll to function using jquery's scrollTop property
 scrollOff = $('#nav-top').height()
 scrollTo = (target, ms = 250, cb) ->
@@ -29,3 +32,19 @@ dropdown.on 'focusin', (e) ->
 
 dropdown.on 'focusout', (e) ->
   chevron.removeClass('octicon-chevron-up').addClass 'octicon-chevron-down'
+
+# image gallery
+gallery.each ->
+  $(@).magnificPopup {
+    delegate: 'a'
+    type: 'image'
+    tLoading: 'loading image #%curr%...',
+    image: {
+      verticalFit: true
+    }
+    gallery: {
+      enabled: true
+      preload: [1,1]
+      #arrowMarkup: '<button title="%title%" type="button" class="mega-octicon octicon-move-%dir%"></button>'
+    }
+  }

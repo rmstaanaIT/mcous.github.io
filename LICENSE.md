@@ -29,6 +29,9 @@ This site uses Bootstrap. Copyright 2011-2014 by Twitter, Inc, and shared under 
 # jquery
 This site uses jQuery. Copyright 2014 by the jQuery Foundation and other contributors, and shared under the terms of the MIT License.
 
+# magnific popup
+This site uses the Magnific Popup jQuery plugin. Copyright 2014 by [Dmitry Semenov](http://dimsemenov.com), and shared under the terms of the MIT License.
+
 # octicons
 This site uses GitHub's Octicons. Copyright 2012-2014 GitHub
 
@@ -37,3 +40,12 @@ Applies to all font files
 
 Code License: MIT (http://choosealicense.com/licenses/mit/)
 Applies to all other files
+
+# fonts
+## quando
+Copyright by Joana Correia da Silva
+License: SIL Open Font License, 1.1
+
+## raleway
+Copyright by Matt McInerney and multiple designers
+License: SIL Open Font License, 1.1

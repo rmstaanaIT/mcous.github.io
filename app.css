@@ -23,18 +23,25 @@ a:link {
   border: 0;
 }
 #nav-top .navbar-toggle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
   border: 0;
-  color: #f5f5f5;
+  color: #d3d3d3;
 }
 #nav-top .navbar-toggle:hover,
 #nav-top .navbar-toggle:focus {
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 #nav-top #nav-top-collapse {
+  font-size: 16px;
   border: 0;
 }
 #nav-top #nav-top-collapse:not(.in) .dropdown-menu {
   background-color: #343434;
+}
+#nav-top .navbar-brand {
+  font-size: 20px;
 }
 #nav-top a,
 #nav-top .navbar-brand {

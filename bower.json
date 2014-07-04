@@ -2,8 +2,9 @@
   "name"            : "cousins.io",
   "dependencies" :
   {
-    "octicons"  : "*",
-    "jquery"    : "*",
-    "bootstrap" : "*"
+    "octicons"       : "*",
+    "jquery"         : "*",
+    "bootstrap"      : "*",
+    "magnific-popup" : "*"
   }
 }

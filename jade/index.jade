@@ -21,6 +21,8 @@ html(lang="en")
     link(rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css')
     // octicons
     link(rel='stylesheet' href='bower_components/octicons/octicons/octicons.css')
+    // magnific gallery
+    link(rel='stylesheet' href='bower_components/magnific-popup/dist/magnific-popup.css')
     // my stylesheet
     link(rel='stylesheet' href='app.css')
 
@@ -44,12 +46,15 @@ html(lang="en")
                 li: a.link-scroll(href='#lamp') lamp
                 li: a.link-scroll(href='#reflow') reflow
                 li: a.link-scroll(href='#svgerber') svgerber
-            li: a(href='/cousins-resume.pdf' target='_blank') resume (pdf)
+            li
+              a(href='/cousins-resume.pdf' target='_blank')= 'resume  '
+               span.octicon.octicon-file-pdf
+               span.sr-only= '(pdf)'
 
     .jumbotron
       .container
         h1#main-title a page to promote mike cousins
-        p I'm Mike, and I'm a mechatronics engineer with a passion for open-source hard / firm / software, design, and coffee. One day I'm going to build an open-source coffee making robot. Until then, get in touch with me if you want to make something cool.
+        p I'm Mike, and I'm a mechatronics engineer with a passion for open-source things, design, and coffee. One day I'm going to build an open-source coffee making robot. Until then, let's make something cool together.
 
     section.container#contact
       h2 methods to contact michael cousins
@@ -119,7 +124,7 @@ html(lang="en")
       article#clockblock
         h3= 'clockblock '
           small: a(href='http://clockblock.me' target='_blank')= 'clockblock.me'
-        ul.list-unstyled.row
+        ul.list-unstyled.row.list-gallery
           li.col-md-2.col-sm-4.col-xs-6
             a.thumbnail(href='/img/clock_wild.jpg' target='_blank')
               img(src='/img/tn/clock_wild_tn.jpg')
@@ -153,7 +158,7 @@ html(lang="en")
       article#lamp
         h3= 'lamp '
           small: a(href='http://github.com/wileycousins/lamp' target='_blank')= 'lamp github page'
-        ul.list-unstyled.row
+        ul.list-unstyled.row.list-gallery
           li.col-md-2.col-sm-4.col-xs-6
             a.thumbnail(href='/img/lamp.jpg' target='_blank')
               img(src='/img/tn/lamp_tn.jpg')
@@ -179,7 +184,7 @@ html(lang="en")
       article#reflow
         h3= 'reflow '
           small: a(href='http://github.com/wileycousins/reflow' target='_blank')= 'reflow github page'
-        ul.list-unstyled.row
+        ul.list-unstyled.row.list-gallery
           li.col-md-2.col-sm-4.col-xs-6
             a.thumbnail(href='/img/reflow_cooking.jpg' target='_blank')
               img(src='/img/tn/reflow_cooking_tn.jpg')
@@ -204,7 +209,7 @@ html(lang="en")
       article#svgerber
         h3= 'svgerber '
           small: a(href='http://svgerber.cousins.io' target='_blank')= 'svgerber.cousins.io'
-        ul.list-unstyled.row
+        ul.list-unstyled.row.list-gallery
           li.col-md-2.col-sm-4.col-xs-6
             a.thumbnail(href='/img/svgerber.png' target='_blank')
               img(src='/img/tn/svgerber_tn.png')
@@ -231,6 +236,7 @@ html(lang="en")
             li: a(href='http://github.com/mcous/mcous.github.io' target='_blank') page source
             li: a(href='http://getbootstrap.com/' target='_blank') built with bootstrap
             li: a(href='http://octicons.github.com/' target='_blank') uses github's octicons
+            li: a(href='http://dimsemenov.com/plugins/magnific-popup/' target='_blank') uses magnific popup
             li: a(href='https://github.com/mcous/mcous.github.io/blob/master/LICENSE.md' target='_blank') copyright 2014 by michael cousins
 
     // scripts
@@ -238,5 +244,7 @@ html(lang="en")
     script(src='bower_components/jquery/dist/jquery.min.js')
     // pulling myself up by my
     script(src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    // gallery effects
+    script(src='bower_components/magnific-popup/dist/jquery.magnific-popup.min.js')
     // application
     script(src='app.js')
