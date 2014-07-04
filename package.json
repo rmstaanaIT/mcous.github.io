@@ -5,7 +5,8 @@
   {
     "bower"         : "*",
     "jade"          : "*",
-    "less"          : "*",
+    "stylus"        : "*",
+    "nib"           : "*",
     "coffee-script" : "*",
     "node-static"   : "*"
   }
