@@ -1,13 +1,14 @@
 {
-  "name"            : "cousins.io",
-  "version"         : "0.0.1",
-  "devDependencies" :
-  {
-    "bower"         : "*",
-    "jade"          : "*",
-    "stylus"        : "*",
-    "nib"           : "*",
-    "coffee-script" : "*",
-    "node-static"   : "*"
+  "name": "cousins.io",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bower": "*",
+    "coffee-script": "*",
+    "glob": "^4.0.4",
+    "imagemin": "^0.4.6",
+    "jade": "*",
+    "nib": "*",
+    "node-static": "*",
+    "stylus": "*"
   }
 }
