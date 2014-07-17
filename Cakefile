@@ -3,6 +3,13 @@ fs = require 'fs'
 {exec} = require 'child_process'
 # also use node static as a basic webserver
 stat = require 'node-static'
+# use imagemin for image compression
+Imagemin = require 'imagemin'
+Glob = require('glob').Glob
+
+# images
+imgDir = './img/unoptimized'
+imgOut = './img'
 
 # jade options
 jadeDir = 'jade'
@@ -89,3 +96,18 @@ task 'serve', 'watch and serve the files to localhost:8080', (options) ->
     ).resume()
   ).listen port
   console.log "server started at http://localhost:#{port}\n"
+
+# optimize jpegs
+task 'jpg', 'optimize jpeg images', (options) ->
+  images = new Glob "#{imgDir}/*.jpg", {nosort: true}, (error, files) ->
+    for f in files
+      do (f) ->
+        dest = "#{imgOut}/#{f.split('/')[-1..][0]}"
+        imagemin = new Imagemin()
+          .src f
+          .dest dest
+          .use Imagemin.jpegtran { progressive: true }
+        console.log "optimizing #{f} to #{dest}"
+        imagemin.optimize (error, result) ->
+          if error then console.log "imagemin error: #{error}"
+          console.log "optimized #{f}"
