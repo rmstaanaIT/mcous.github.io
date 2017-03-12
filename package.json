@@ -1,7 +1,7 @@
 {
   "name": "mike-dot-cousins-dot-io",
   "title": "Mike Cousins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mike Cousins' home on the internet",
   "scripts": {
     "lint": "standard lib/*.js",
