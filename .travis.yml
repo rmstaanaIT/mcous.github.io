@@ -1,0 +1,16 @@
+sudo: false
+language: node_js
+node_js:
+- '6'
+script: npm run ci
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: npm run ci:deploy
+  on:
+    repo: mcous/mcous.github.io
+    tags: true
+    all_branches: true
+env:
+  global:
+    secure: gYtONqrsx8P61nfr/Q0h33BGklM7f0fQNIQvtOJ2CuqzyXikeQOvi6CxFrZYCNQy84Q02Rti7NV5qAtOOoui0gvslF+ZGEjAQl7fMkOkx4vFFBKEy4+6+77PTtrHBuhE70H0nFZuJ8GasBDl7oHEn9fsV8w6QspgPn41nYauf9Y=

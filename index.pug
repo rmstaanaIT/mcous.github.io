@@ -1,0 +1,39 @@
+mixin iconLink(title, href, iconName)
+  a.link.dib.mh2.pa2.lh-none.ba.bw1.dim.near-black(
+    title=title
+    aria-label=title href=href)
+    != icons[iconName]
+
+doctype html
+html(lang='en')
+  head
+    meta(name='description' content=description)
+    meta(name='author' content=author)
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+
+    link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32.png')
+    link(rel='icon' type='image/png' sizes='64x64' href='/favicon-64.png')
+    link(rel='icon' type='image/png' sizes='128x128' href='/favicon-128.png')
+    link(rel='stylesheet' href=css)
+
+    title= title
+
+  body.open-sans.pt6.near-black
+    //- .h4 = 8rem; br.lh-title.f1 = 2 * 1.5 * 2.25rem = 6.75rem
+    .w4.h4.center.ba.bw1.br-100
+      h1.mv0.pt4.f3.normal.tc
+        | mike
+        br
+        | cousins
+
+    .mt3.mb4.tc
+      p.mv0.lh-copy.f4 /[a-z]+ware engineer/
+      p.mv0.lh-copy.f5.fw3 * warranty void if coffee is removed
+
+    .mv4.tc
+      +iconLink('github', 'https://github.com/mcous', 'mark-github')
+      +iconLink('linkedin', 'https://www.linkedin.com/in/mcous/', 'linkedin')
+      +iconLink('email', 'mailto:mike@cousins.io', 'mail')
+      +iconLink('resume', 'http://mike.cousins.io/resume/', 'file')
