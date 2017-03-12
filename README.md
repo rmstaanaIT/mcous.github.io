@@ -1,6 +1,7 @@
 # mike.cousins.io
 
 [![Build Status][travis-shield]][travis]
+[![Dependency status][david-shield]][david]
 [![devDependency status][david-dev-shield]][david-dev]
 
 > Mike Cousins' home on the internet
@@ -70,6 +71,8 @@ Cut a new version and push to GitHub to tell the CI server to build and deploy H
 - [xtend](https://github.com/Raynos/xtend): extend like a boss
 
 [travis]: https://travis-ci.org/mcous/mcous.github.io
-[david-dev]: https://david-dm.org/mcous/mcous.github.io/master?type=dev
-[travis-shield]: https://img.shields.io/travis/mcous/mcous.github.io/master.svg?style=flat-square&maxAge=3600	
-[david-dev-shield]: https://img.shields.io/david/dev/mcous/mcous.github.io/master.svg?style=flat-square&maxAge=3600	
+[david]: https://david-dm.org/mcous/mcous.github.io/develop
+[david-dev]: https://david-dm.org/mcous/mcous.github.io/develop?type=dev
+[travis-shield]: https://img.shields.io/travis/mcous/mcous.github.io/develop.svg?style=flat-square&maxAge=3600	
+[david-shield]: https://img.shields.io/david/mcous/mcous.github.io/develop.svg?style=flat-square&maxAge=3600	
+[david-dev-shield]: https://img.shields.io/david/dev/mcous/mcous.github.io/develop.svg?style=flat-square&maxAge=3600	
