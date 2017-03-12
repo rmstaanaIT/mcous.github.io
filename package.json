@@ -13,7 +13,7 @@
     "ci:gitconfig:name": "git config --global user.name 'Mike Cousins'",
     "ci:gitconfig:email": "git config --global user.email 'mike@cousins.io'",
     "ci:gitconfig": "npm run ci:gitconfig:name && npm run ci:gitconfig:email",
-    "ci:ghpages": "gh-pages -x -r https://$GH_TOKEN@github.com/mcous/mcous.github.io.git -d public -m \"$(date)\"",
+    "ci:ghpages": "gh-pages -x -b master -r https://$GH_TOKEN@github.com/mcous/mcous.github.io.git -d public -m \"$(date)\"",
     "ci:deploy": "npm run ci:ghpages",
     "preci:deploy": "npm run ci:gitconfig",
     "ci": "npm run build"
