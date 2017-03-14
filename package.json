@@ -2,7 +2,7 @@
   "name": "mike-dot-cousins-dot-io",
   "title": "Mike Cousins",
   "version": "1.0.2",
-  "description": "Mike Cousins' home on the internet",
+  "description": "Mike Cousins is a full-stack, software, firmware, and hardware engineer working in JavaScript, Scala, embedded C, and [insert language here]. He's powered by caffeine and semantically versioned.",
   "scripts": {
     "lint": "standard lib/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
